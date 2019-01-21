@@ -39,6 +39,14 @@ import moment from 'moment'
 import { Loading } from 'element-ui'
 
 export default {
+  filters: {
+    // 参考 http://momentjs.cn/docs/#/durations/humanize/
+    diffTime(time) {
+      const diff = moment() - moment(time)
+      const du = moment.duration(diff, 'ms')
+      return du.locale('zh-cn').humanize()
+    }
+  },
   data() {
     return {
       tabs: {
@@ -73,14 +81,6 @@ export default {
   },
   mounted() {
     this.$refs.article.addEventListener('scroll', _.throttle(this.computedScroll, 300))
-  },
-  filters: {
-    // 参考 http://momentjs.cn/docs/#/durations/humanize/
-    diffTime(time) {
-      const diff = moment() - moment(time)
-      const du = moment.duration(diff, 'ms')
-      return du.locale('zh-cn').humanize()
-    }
   },
   methods: {
     linkDetail(id) {

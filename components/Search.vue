@@ -2,7 +2,7 @@
   <div class="search-box">
     <div class="search-input">
       <span class="icon el-icon-search" />
-      <input class="text" placeholder="搜索未做。。。" type="text">
+      <input class="text" placeholder="CNode搜索接口不给力未做。。。" type="text">
     </div>
   </div>
 </template>
