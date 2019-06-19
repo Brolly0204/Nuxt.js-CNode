@@ -1,8 +1,9 @@
-import Vue from 'vue'
-import Vuex from 'vuex'
+// https://zh.nuxtjs.org/guide/vuex-store/
+// import Vue from 'vue'
+// import Vuex from 'vuex'
 
-Vue.use(Vuex)
+// Vue.use(Vuex)
 
-// export const state = () => ({})
-//
-// export const mutations = {}
+export const state = () => ({})
+
+export const mutations = {}
